@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="" href="css/common.css">
+    <link rel="stylesheet" type="" href="css/style.css">
+    <link rel="stylesheet" href="icon/iconfont.css">
+</head>
+
+<body>
+    <div class="box">
+        <header>
+            <a href="#"><i class="iconfont">&#xe653;</i></a>
+            <a href="#">无连接</a>
+            <a href="#"><i class="iconfont">&#xe6f9;</i></a>
+
+        </header>
+
+        <section>
+            <div class="top">
+                <dl>
+                    <dt><i class="iconfont">&#xe60b;</i></dt>
+                    <dd>电源</dd>
+                </dl>
+                <dl>
+                    <dt><i class="iconfont">&#xe648;</i></dt>
+                    <dd>首页</dd>
+                </dl>
+                <dl>
+                    <dt><i class="iconfont">&#xe6f9;</i></dt>
+                    <dd>菜单</dd>
+                </dl>
+                <dl>
+                    <dt><i class="iconfont">&#xe610;</i></dt>
+                    <dd>截屏</dd>
+                </dl>
+            </div>
+
+            <div class="swiper-container" id="con">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <p>滑动控制上下左右，点击确定</p>
+                        <p>长按调节电视音量</p>
+                    </div>
+                    <div class="swiper-slide">
+
+                    </div>
+                    <div class="swiper-slide">
+
+                    </div>
+                    <div class="swiper-slide">
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <a href="#"><i class="iconfont">&#xe613;</i></a>
+            <a href="#"><i class="iconfont">&#xe7b4;</i></a>
+            <a href="#"></a>
+        </footer>
+    </div>
+
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            onSlideChangeStart: function(e) {
+                var index = e.activeIndex;
+                console.log(index);
+
+
+            }
+        });
+
+
+        $('.top').on('click', 'dl', function() {
+            var i = $(this).index();
+
+            mySwiper.slideTo(i);
+        })
+    </script>
+</body>
+
+</html>
